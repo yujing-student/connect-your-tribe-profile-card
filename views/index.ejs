@@ -2,29 +2,45 @@
 
 
 <main>
-  <header>
-    <h1><%= data.name %>
-      <%= data.prefix %>
-      <%= data.surname%>
-    </h1>
-  </header>
-    <section class="foto-info">
-        <img id="image" src="images/image.jpg" height="" alt="Dit is mijn foto"><!--dit hoort zo te staan omdat de images anders niet vindbaar is -->
+    <div class="grid-container">
+        <section>
+            <h1><%= data.name %>
+                <%= data.prefix %>
+                <%= data.surname%>
+            </h1>
+        </section>
+        <section class="foto-info">
+            <img id="image" src="images/image.jpg" height="" alt="Dit is mijn foto"><!--dit hoort zo te staan omdat de images anders niet vindbaar is -->
+            <p><%=data.avatar%></p>
+            <p> ik ben nu: 20 <%= data.custom.age %></p>
+            <p> over mij:ik ben 20 jaar en ik woon in assendelft <%= data.custom.about %></p>
+            <p> mijn opleiding mbo 4 software developer: <%= data.custom.opleiding %></p>
+
+            <p> bio: <%= data.bio%></p>
+        </section>
+
+        <section class="social-media">
+            <h2>social media</h2>
+            <ul>
+                <li><a href="<%= data.website %>">Link naar github account</a></li>
+            </ul>
+
+        </section>
+    </div>
+    <div>
+        <h3>tekst uit database</h3>
+        <p><%= data.name %>
+            <%= data.prefix %>
+            <%= data.surname%>
+        </p>
         <p><%=data.avatar%></p>
-        <p> ik ben nu: 20 <%= data.custom.age %></p>
-        <p> over mij:ik ben 20 jaar en ik woon in assendelft <%= data.custom.about %></p>
-        <p> mijn opleiding mbo 4 software developer: <%= data.custom.opleiding %></p>
+        <p> ik ben nu: <%= data.custom.age %></p>
+        <p> over mij:<%= data.custom.about %></p>
+        <p> mijn opleiding: <%= data.custom.opleiding %></p>
 
         <p> bio: <%= data.bio%></p>
-    </section>
+    </div>
 
-  <section class="social-media">
-    <h2>social media</h2>
-    <ul>
-      <li><a href="<%= data.website %>">Link naar github account</a></li>
-    </ul>
-
-  </section>
 
 </main>
 

@@ -25,7 +25,6 @@ app.use(express.static('public'))
 // Maak een GET route voor de index
 app.get('/', function (request, response) {
   // Render index.ejs uit de views map en geef uit FDND API opgehaalde data mee
-  console.log(data);
   response.render('index', data)
 
 
