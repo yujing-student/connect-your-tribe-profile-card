@@ -1,20 +1,18 @@
 <%- include('./partials/head') %>
-<link rel="stylesheet" href="/public/style-visite.css">
 <article>
   <header>
     <h1>Hallo</h1>
     <p>mijn naam is</p>
   </header>
 
-  <p><%= data.name %><%data.email %><%data.website%>
+  <p><%= data.name %><%data.email %><%data.website%><%= data.surname%>
 
   </p>
-  <p><%= data.surname%></p>
-  <h2 class="second-title">hover voor meer informatie klik en hover over de bestaande tekst</h2>
+  <p class="second-title">hover voor meer informatie klik en hover over de bestaande tekst</p>
   <button type="button" onclick="show()" id="btnID">
     laat foto zien
   </button>
-  <img id="image" src="/public/images/image.jpg" height="" alt="Dit is mijn foto">
+  <img id="image" src="images/image.jpg" height="" alt="Dit is mijn foto">
 
 
   <section class="about-me">
