@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: open sans, Arial, serif;
+
+}
+
+article {
+    position: relative; /*positie kleine button in rood*/
+    display: flex;
+    flex-direction: column; /*align-items: center;*/
+    justify-content: flex-start;
+    width: 46vw; /*breedte visitekaart*/
+    height: 48vw; /*lengte visitekaartje*/
+    /*vw betekent viewpord width het staat voor het percentage van de breedte van de viewport*/
+    max-width: 85em; /*minimale breedt*/
+    min-width: 20em;
+    border-radius: 1rem;
+    /*rondjes van artick*/
+    background: #00ff92;
+    background: linear-gradient(0deg, rgba(0, 239, 255, 1) 40%, #4fdd51 100%);
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, .1); /*ronde hoeken met een schadwu*/
+    transition: .25s;
+}
+
+/*   positie van header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin: 2rem 0 1rem;
+    color: #0029E5;
+    font-size: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-title {
+    font-size: 1.5em; /*de font size bepalen hoe groot die is*/
+}
+
+button {
+    position: absolute;
+    right: 20rem;
+    top: 30rem;
+    width: 6rem;
+    height: 6rem;
+    padding: .25rem;
+    border: none;
+    /*er zit geen border*/
+    border-radius: 50%; /*rondje word hier gemaakt van de button*/
+    transform: scale(.8); /*vegroten van het rondje*/
+    transition: .25s;
+    /*  tekst grootte*/
+    font-size: 1em;
+}
+
+button:focus {
+    outline: none;
+    background: #2617fa;
+}
+
+button:focus svg {
+    stroke: rgb(255, 50, 50);
+}
+
+svg {
+    position: absolute;
+    top: calc(1.25rem - 12px);
+    left: calc(1.25rem - 12px);
+    stroke: #6fe734;
+    transition-delay: .25s;
+}
+
+button svg:nth-of-type(2) {
+    opacity: 0;
+    transition-delay: 0ms;
+}
+
+img {
+    position: relative;
+    top: 1em;
+    width: 12.5em;
+    height: auto;
+    left: 15.4em;
+    align-items: center;
+}
+
+#image {
+
+    transform: scale(1); /*transform scale daarmee word het groter iedere keer als je index opent */
+    /*duration is de tijd die het gebruikt voor de transietie om groter te worden*/
+    transition-duration: 5s;
+}
+
+.about-me { /*div in de hoek*/
+    position: absolute;
+    /*met absolutut blijft de div op 1 aangewezen positie die niet hetzelfde is
+       als de andere divs over mij en vrije tijd en kan de div dus ook boven op een andere dv zitten*/
+    top: 12em;
+    left: 1.6em;
+    border-radius: 2em;
+    width: 12vw; /*vw staat voor viewport*/
+    height: 14em; /*hoogte*/
+    align-items: center; /*zwarte rand meegeven*/
+    border: solid black;
+    background-color: #DEFF92;
+}
+
+.h3-about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25em;
+}
+
+hr {
+    border: 0.1em solid;
+}
+
+/*over mij content parapgraph*/
+.about-me-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*  text decoratie*/
+    transition: .25s .3s;
+    /*font text decoration*/
+    font-family: 'Urbanist', sans-serif;
+    color: #390000;
+    /*center items in het midden*/
+    font-size: 0.90em;
+    height: 4em;
+}
+
+/* alle linkjes met a href worden rood als je erop gaat hoveren met je muis*/
+a:hover {
+    color: #2617fa; /*    de kleur van de linkjes word blauw*/
+}
+
+.div-sport {
+    /*positioneren van de div*/
+    position: absolute;
+    top: 12em;
+    right: 1em;
+    left: 30em;
+    align-items: center;
+    border: solid black;
+    background-color: #DEFF92;
+    /*rondjes en lengte en hoogte*/
+    border-radius: 2em;
+    width: 12vw;
+    height: 14em;
+}
+
+.h3-sporten {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*  text decoratie*/
+    font-size: 1.25em;
+}
+
+.h3-sporten:hover ~ .sport-content {
+    visibility: visible;
+    /*  als je over de div h3 vrije tijd hovert dan word de class vrije tijd content geacttiveerd
+    en laat die de inhoud hiervan zien*/
+    /*  het ~ teken betekend dat de classes dezelfde parent hebben en de classes broers en zussen zijn*/
+}
+
+.sport-content {
+    transition: .25s .3s;
+    /*font text decoration*/
+    font-size: 1em;
+    font-family: 'Urbanist', sans-serif;
+    color: #390000;
+    display: flex;
+    align-items: center; /*center items in het midden*/
+    justify-content: center; /*center content in het midden*/
+    height: 5em; /*hoogte van de content*/
+
+    visibility: hidden; /*  content niet zichtbaar*/
+    /*https://www.w3schools.com/cssref/playdemo.php?filename=playcss_visibility&preval=hidden*/
+
+}
+
+.div-free-time {
+    position: relative;
+    top: 1.9em;
+    left: 15em;
+    align-items: center;
+    border: solid black;
+    background-color: #DEFF92;
+    border-radius: 2em;
+    width: 12vw;
+    height: 14em;
+}
+
+
+.h3-free-time {
+    display: flex; /*center items in het midden*/
+    align-items: center;
+    justify-content: center;
+    /*font text decoration*/
+    font-size: 1.25em;
+    color: #390000;
+
+}
+
+.free-time-content {
+    transition: .25s .3s;
+    /*font text decoration*/
+    font-size: 1em;
+    font-family: 'Urbanist', sans-serif;
+    color: #390000;
+    /*center items in het midden*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8em;
+    visibility: hidden;
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator dit teken ~*/
+.h3-free-time:hover ~ .free-time-content {
+    visibility: visible;
+    /*  als je over de div h3 vrije tijd hovert dan word de class vrije tijd content geacttiveerd en laat die de inhoud hiervan zien*/
+    /*  het ~ teken betkend dat als je */
+}
+
+
+article > p {
+    width: 100%; /* breedte waarin de p het 1st geneste is van de article*/
+    margin-top: 0;
+    padding: 3rem 2rem;
+    border-radius: 0 0 1rem 1rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+}
