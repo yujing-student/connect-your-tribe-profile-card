@@ -1,49 +1,31 @@
 <%- include('./partials/head') %>
-<article>
+
+
+<main>
   <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
+    <h1><%= data.name %>
+      <%= data.prefix %>
+      <%= data.surname%>
+    </h1>
   </header>
+    <section class="foto-info">
+        <img id="image" src="images/image.jpg" height="" alt="Dit is mijn foto"><!--dit hoort zo te staan omdat de images anders niet vindbaar is -->
+        <p><%=data.avatar%></p>
+        <p> ik ben nu: 20 <%= data.custom.age %></p>
+        <p> over mij:ik ben 20 jaar en ik woon in assendelft <%= data.custom.about %></p>
+        <p> mijn opleiding mbo 4 software developer: <%= data.custom.opleiding %></p>
 
-  <p><%= data.name %></p>
-  <p><%= data.surname %></p>
-  <p><%=data.website%></p>
+        <p> bio: <%= data.bio%></p>
+    </section>
 
-  <p><%= data.bio%></p>
+  <section class="social-media">
+    <h2>social media</h2>
+    <ul>
+      <li><a href="<%= data.website %>">Link naar github account</a></li>
+    </ul>
 
-<!--  </p>-->
-  <p class="second-title">hover voor meer informatie klik en hover over de bestaande tekst</p>
-  <button type="button" onclick="show()" id="btnID">
-    laat foto zien
-  </button>
-  <img id="image" src="images/image.jpg" height="" alt="Dit is mijn foto"><!--dit hoort zo te staan omdat de images anders niet vindbaar is -->
-
-
-  <section class="about-me">
-    <h3 class="h3-about-me">over mij</h3>
-    <hr>
-    <p class="about-me-content">ik ben 19 jaar oud en ik woon in assendelft </p>
-    <a href="https://www.regiocollege.nl/" class="about-me-content">ik heb mijn mbo4 behaald
-      op het regio college klik voor meer info</a>
   </section>
 
-  <section class="div-sport">
-    <h3 class="h3-sporten">sporten</h3>
-    <hr>
-    <p class="sport-content"> ik hou van fitnessen en doe aan krachttraining</p>
-  </section>
-
-  <!--hover functie met afbeelding verstoppen en als je over sporten hovert dan komt er een foto met een link in het bijschirft tevoorschijn-->
-  <section class="div-free-time">
-    <h3 class="h3-free-time">vrije tijd</h3>
-    <hr>
-    <p class="free-time-content">ik kijk graag champions leauge voetbal en verder vind ik het leuk om tv te kijken
-      zoals een huis vol
-      en vind ik gamen ook leuk
-    </p>
-  </section>
-
-  <footer></footer>
-</article>
+</main>
 
 <%- include('./partials/foot') %>
