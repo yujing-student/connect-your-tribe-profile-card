@@ -1,4 +1,4 @@
-<%- include('./partials/head') %>
+<%- include('./partials/head') %><!--maak gebruik van partias voor de header-->
 
 
 <main>
@@ -12,11 +12,12 @@
         <section class="foto-info">
             <img id="image" src="images/image.jpg" height="" alt="Dit is mijn foto"><!--dit hoort zo te staan omdat de images anders niet vindbaar is -->
             <p><%=data.avatar%></p>
-            <p> ik ben nu: 20 <%= data.custom.age %></p>
-            <p> over mij:ik ben 20 jaar en ik woon in assendelft <%= data.custom.about %></p>
-            <p> mijn opleiding mbo 4 software developer: <%= data.custom.opleiding %></p>
-
+            <p> ik ben nu:<%= data.custom.age %>
+            </p>
             <p> bio: <%= data.bio%></p>
+            <p> mijn opleiding:<%= data.custom.opleiding %></p>
+
+
         </section>
 
         <section class="social-media">
@@ -27,20 +28,6 @@
 
         </section>
     </div>
-    <div>
-        <h3>tekst uit database</h3>
-        <p><%= data.name %>
-            <%= data.prefix %>
-            <%= data.surname%>
-        </p>
-        <p><%=data.avatar%></p>
-        <p> ik ben nu: <%= data.custom.age %></p>
-        <p> over mij:<%= data.custom.about %></p>
-        <p> mijn opleiding: <%= data.custom.opleiding %></p>
-
-        <p> bio: <%= data.bio%></p>
-    </div>
-
 
 </main>
 
