@@ -57,11 +57,11 @@ body {
 .foto-info{
     grid-area: 2;
     margin-left: 5em;
-    margin-right: 5em;
+    margin-right: 4em;
 }
 .social-media{
     grid-area: 3;
-    margin-right: -12em;
+    margin-right: 6em;
 }
 #image{
     width: 300px;
