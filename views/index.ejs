@@ -6,16 +6,17 @@
         <section>
             <h1><%= data.name %>
                 <%= data.prefix %>
-                <%= data.surname%>
+                <%= data.surname %>
             </h1>
         </section>
         <section class="foto-info">
-            <img id="image" src="images/image.jpg" height="" alt="Dit is mijn foto"><!--dit hoort zo te staan omdat de images anders niet vindbaar is -->
-            <p><%=data.avatar%></p>
-            <p> ik ben nu:<%= data.custom.age %>
+            <img id="image" src="images/image.jpg" height="" alt="Dit is mijn foto">
+            <!--dit hoort zo te staan omdat de images anders niet vindbaar is -->
+            <p><%= data.avatar %></p>
+            <p> ik ben nu: <%= data.custom.age %>
             </p>
-            <p> bio: <%= data.bio%></p>
-            <p> mijn opleiding:<%= data.custom.opleiding %></p>
+            <p> bio: <%= data.bio %></p>
+            <p> mijn opleiding: <%= data.custom.opleiding %></p>
 
 
         </section>
