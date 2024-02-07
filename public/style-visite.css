@@ -64,8 +64,17 @@ body {
     margin-right: 6em;
 
 }
-li:hover{
-    background-color: white;
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+    color: red;
 }
 
 #image{
