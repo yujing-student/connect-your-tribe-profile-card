@@ -59,7 +59,9 @@ h1 {
     align-items: center;
     justify-content: center;
 }
-
+.about-me{
+    font-size: 1.5em;
+}
 section {
     display: flex;
     flex-direction: column;
