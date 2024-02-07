@@ -3,40 +3,37 @@
 
 <main>
     <div class="grid-container">
+
         <section>
             <h1><%= data.name %>
                 <%= data.prefix %>
                 <%= data.surname %>
             </h1>
         </section>
+
         <section class="foto-info">
-            <img id="image" src="images/image.jpg" height="" alt="Dit is mijn foto">
-            <!--dit hoort zo te staan omdat de images anders niet vindbaar is -->
-            <p> Ik ben nu: <%= data.custom.age %>
+            <img id="image" src="images/image.jpg" height="" alt="Dit is mijn foto"><!--dit hoort zo te staan omdat de images anders niet vindbaar is -->
+            <h2>Over mij</h2>
+            <p> Ik ben nu: <%= data.custom.age %> jaar</p>
+            <p class="bio"> Bio: <%= data.bio %></p>
+            <p class="vooropleiding">Mijn
+                vooropleiding:
+                <a href="https://www.regiocollege.nl/mbo-opleiding/softwaredeveloper"> <%= data.custom.opleiding %>
+                </a>
             </p>
-            <p> Bio: <%= data.bio %></p>
-            <p><a href="https://www.regiocollege.nl/mbo-opleiding/softwaredeveloper">Mijn vooropleiding: <%= data.custom.opleiding %>
-
-                </a> </p>
-
-
         </section>
-        <section class="social-media">
 
+        <section class="social-media">
             <h2>Social media</h2>
             <ul>
-                <li><a href="<%= data.website %>"><img src="/images/25231.png" width="40px"></a></li>
-
-
+                <li>
+                    <a href="<%= data.website %>">
+                        <img src="/images/25231.png" width="40px">
+                    </a>
+                </li>
             </ul>
-
-
         </section>
-
-
     </div>
-
-
 </main>
 
 <%- include('./partials/foot') %>
