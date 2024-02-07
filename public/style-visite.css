@@ -9,9 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-family: open sans, Arial, serif;
-
 }
 
 .grid-container {
@@ -24,38 +22,25 @@ body {
     max-width: 450px;
 
 }
-/*todo tot en met 480px is het lelijk en daarna is het wel mooi*/
+
 @media (min-width: 10em) and (max-width: 25em) {
-   .grid-container{
-       max-width: 450px;
-       background-color: #ffffff;
-       /*display: flex;*/
-       justify-items: center;
-       align-items: center;
-   }
-    #image{
-        width: 217px;
-    }
-    h1{
-        display: flex;
+    .grid-container {
+        max-width: 450px;
+        background-color: #ffffff;
+        /*display: flex;*/
         justify-items: center;
         align-items: center;
-        font-size: 1em;
-        margin-left: 1.8em;
     }
-    p{
-        margin: 0 2em 1.6em 2em;
+
+    #image {
+        width: 217px;
     }
-    .bio,.vooropleiding{
-        text-align: center;
-    }
+
 }
-@media (min-width: 25em)  {
-    p{
-        margin: 0 2em 1.6em 2em;
-        align-items: center;
-    }
-    #image{
+
+@media (min-width: 25em) {
+
+    #image {
         width: 250px;
         display: block;
         object-fit: cover;
@@ -64,24 +49,17 @@ body {
 
 
 }
-@media screen and  (max-width: 800px) {
-    .grid-container{
-        max-width: 450px;
-    }
-}
-@media screen and (max-width: 1100px) {
-    .grid-container{
-        max-width: 450px;
-    }
-}
+
 h1 {
     color: #000000;
     font-size: 2em;
+    text-align: center;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 section {
     display: flex;
     flex-direction: column;
@@ -89,21 +67,34 @@ section {
     justify-content: center;
 }
 
+p {
+    margin: 0 2em 1.6em 2em;
+}
 
+.bio, .vooropleiding {
+    text-align: center;
+}
 
-a{
+a {
     text-decoration: none;
     color: black;
     align-items: center;
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
 
+ul {
+    margin: 0 3em 1em 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
 
-
-li{
+li {
     list-style: none;
+    margin: 1em 1em 1em 1em;
 }
 
 
