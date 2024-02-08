@@ -15,24 +15,19 @@
  * @returns the response from the API endpoint parsed as a json object
  */
 
-
-// export default async function fetchJson(url, payload = {}) {
-//     // The function takes two parameters: 'url' and 'payload'. 'payload' has a default value of an empty object.
-//     return await fetch(url, payload) // The 'fetch' function is called with 'url' and 'payload' as arguments. 'fetch' returns a Promise that resolves to the Response to that request, whether it is successful or not.
-//         .then((response) => response.json()) /* The 'then' method is called on the Promise returned by 'fetch'. This method takes a function as an argument, which is called when the Promise is
-//         fulfilled. Here, the function takes the Response object returned by 'fetch' and calls the 'json' method on it to parse the body text as JSON. This returns another Promise that resolves with the result of parsing the body text as JSON. */
-//         .catch((error) => error) /* The 'catch' method is called on the Promise returned by 'then'.
-//         This method takes a function as an argument, which is called when the Promise is rejected. Here, the function takes the error that caused the Promise to be rejected and simply returns it.
-//         This means that if an error occurs anywhere in the chain of Promises, this function will be called and the error will be returned as the result of 'fetchJson'. */
-// }
-
-// try and catch toegevoegd vnwege error handling omdat de error ook in de console zichtbaar os
+// try and catch toegevoegd vanwege error handling omdat de error ook in de console zichtbaar is
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
+// The function takes two parameters: 'url' and 'payload'. 'payload' has a default value of an empty object.
 export default async function fetchJson(url, payload = {}) {
-    // The function takes two parameters: 'url' and 'payload'. 'payload' has a default value of an empty object.
    try{
        return await fetch(url, payload) // The 'fetch' function is called with 'url' and 'payload' as arguments. 'fetch' returns a Promise that resolves to the Response to that request, whether it is successful or not.
-           .then((response) => response.json()) /* The 'then' method is called on the Promise returned by 'fetch'. This method takes a function as an argument, which is called when the Promise is
-        fulfilled. Here, the function takes the Response object returned by 'fetch' and calls the 'json' method on it to parse the body text as JSON. This returns another Promise that resolves with the result of parsing the body text as JSON. */
+           .then((response) => response.json())
+       /* The 'then' method is called on the Promise returned by 'fetch'.
+           This method takes a function as an argument, which is called when the Promise is
+           https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+        fulfilled. Here,
+        the function takes the Response object returned by 'fetch' and calls the 'json' method on
+        it to parse the body text as JSON. This returns another Promise that resolves with the result of parsing the body text as JSON. */
    }
    catch(error){
        // return await fetch(url, payload)
