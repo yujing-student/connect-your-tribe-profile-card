@@ -28,7 +28,8 @@ app.get('/', function (request, response) {
   // Render index.ejs uit de views map en geef uit FDND API opgehaalde data mee
     response.render('index', {data: data, datasquad: datasquad})
 //     https://stackoverflow.com/questions/71155182/who-to-render-multiple-fetch-function-in-ejs
-//     https://expressjs.com/en/api.html#app.render
+//     https://expressjs.com/en/5x/api.html#app.render
+//     https://dev.to/mochafreddo/understanding-resredirect-and-resrender-in-expressjs-usage-and-security-measures-2k60
 
 
 
