@@ -1,10 +1,11 @@
 // Importeer het npm pakket express uit de node_modules map
 const path = require('path')
 const express = require('express')
+const fetchJson = require("../helpers/fetch-json.js");
 const app = express()
 
 // Importeer de zelfgemaakte functie fetchJson uit de/helpers map
-import fetchJson from '../helpers/fetch-json.js'
+// import fetchJson from '../helpers/fetch-json.js'
 
 // Haal data op uit de FDND API, ga pas verder als de data gedownload is
 const data = await fetchJson('https://fdnd.directus.app/items/person/9')// https://whois.fdnd.nl/admin/ mijn nummer is 9
