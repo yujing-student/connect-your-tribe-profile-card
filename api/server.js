@@ -1,5 +1,7 @@
 // Importeer het npm pakket express uit de node_modules map
-import express from 'express'
+const path = require('path')
+const express = require('express')
+const app = express()
 
 // Importeer de zelfgemaakte functie fetchJson uit de/helpers map
 import fetchJson from '../helpers/fetch-json.js'
@@ -11,9 +13,6 @@ const datasquad = await fetchJson('https://fdnd.directus.app/items/squad/3')
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Example.3A_Using_the_reviver_parameter
 
 // console.log(data); // uncomment om de opgehaalde data te checken
-
-// Maak een nieuwe express app aan
-const app = express()
 
 // Stel ejs in als template engine
 app.set('view engine', 'ejs')
