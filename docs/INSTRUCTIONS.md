@@ -120,7 +120,7 @@ Je realiseert jouw beslissingen uit de ontwerpfase in Node, HTML en CSS.
 
 1. Maak de nieuwe HTML versie van jouw visitekaartje door de `.ejs` bestanden in `/views/` en misschien`/views/partials` aan te passen. Zet de verwijzing naar CSS even uit en check door je server te starten met `npm start` even of je wijzigingen goed doorgevoerd zijn.
 2. Maak de nieuwe CSS versie van jouw visitekaartje door de `.css` bestanden aan te passen en check even of je wijzigingen goed doorgevoerd zijn.
-3. Pas op basis van de uitleg in het college, met behulp van de `Fetch API` de aanroep naar `whois.fdnd.nl` in `server.js` aan, en check of er geen foutmeldingen ontstaan.
+3. Pas op basis van de uitleg in het college, met behulp van de `Fetch API` de aanroep naar `whois.fdnd.nl` in `index.cjs` aan, en check of er geen foutmeldingen ontstaan.
 4. Voer stapje voor stapje de gegevens uit de REST API door in jouw visitekaartje, check na elke stap of alles nog werkt.
 5. Blijf stapje voor stapje werken, stel vragen aan klasgenoten, op discord of aan een docent als je er niet uit komt.
 
