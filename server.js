@@ -7,7 +7,9 @@ import fetchJson from './helpers/fetch-json.js'
 // Haal data op uit de FDND API, ga pas verder als de data gedownload is
 const data = await fetchJson('https://fdnd.directus.app/items/person/9')// https://whois.fdnd.nl/admin/ mijn nummer is 9
 const datasquad = await fetchJson('https://fdnd.directus.app/items/squad/3')
- data.data.custom = JSON.parse(data.data.custom);/*parsen the string information naar data zoals de rest*/
+
+
+ // data.data.custom = JSON.parse(data.data.custom);/*parsen the string information naar data zoals de rest*/
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Example.3A_Using_the_reviver_parameter
 
 // console.log(data); // uncomment om de opgehaalde data te checken
